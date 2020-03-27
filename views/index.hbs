@@ -1,0 +1,28 @@
+<div class="card text-center">
+  <div class="card-body">
+    <h4 class="card-title">Hotel Reviews</h4>
+    <p class="card-text">Verified Hotel Reviews by Real Guests</p>
+    <a href="/about" class="btn btn-primary">more about us</a>
+  </div>
+</div>
+
+<div class="row">
+    {{#each hotels}}
+    <div class="col-md-4">
+        <div class="review">
+            <a href="#">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{this.name}}</h4>
+                    <p class="card-text text-muted">
+                        {{this.address.street}} <br>
+                        {{this.address.city}} -  {{this.address.country}}
+                    </p>
+                    <div class="starrr stars" data-rating="{{this.rating}}"></div> <span>({{this.count}} reviews)</span>
+                </div>
+            </div>
+            </a>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,35 @@
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        {{#if messages }}
+            <div class="alert alert-danger">
+                Invalid Login
+            </div>
+        {{else}}
+            <div class="alert alert-info">
+                Please Enter Your Credentials
+            </div>
+        {{/if}}
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title mt-2 mb-4">{{title}}</h3>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-round btn-lg">Login</button>
+                        <hr />
+                        Need an account?  <a href="/register" title="Register">Register</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
